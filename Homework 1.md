@@ -158,5 +158,3 @@ What are the pronounced names of each of the following runes?
 - Q15. `|-` barhep
 
 - Q16. What are your biggest remaining concerns, points of misunderstanding or fuzzy understanding, or other feedback on Lesson 1?
-
-test
