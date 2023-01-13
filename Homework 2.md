@@ -53,12 +53,38 @@ Many runes have irregular syntax.  This can make it easier to write aesthetical
 Molds define Hoon structures.  They have a default value (“bunt”) and are strictly statically typed (i.e. they must match).
 
 - Q4. What is the bunt of `@da`?
+```
+> ^*  @da
+~2000.1.1
+```
 
 - Q5. What is the bunt of `@uc`?
+```
+> ^*  @uc
+0c1111111111111111111114oLvT2
+```
 
 - Q6. What is the bunt of `@da` as a `@ud`?  (I.e., bunt it then convert that value to @ud.)  
+```
+> =/  x  ^*  @da
+  `@ud`x
+170.141.184.492.615.420.181.573.981.275.213.004.800
+
+> `@ud`^*(@da)
+170.141.184.492.615.420.181.573.981.275.213.004.800
+
+> ^-  @ud  ^-  @  ^*  @da
+170.141.184.492.615.420.181.573.981.275.213.004.800
+```
 
 - Q7. What is the bunt of `cell`?  (I.e. there is a type in Hoon named `cell`, do it of that.)
+```
+> ^*  cell
+#t/[* *]
+
+> ^*  ^
+[0 0]
+```
 
 - Q8. Produce a type union which can accept a signed or unsigned decimal integer.  (ETA:  actually not a good question since type unions can't distinguish auras, do it for practice but I'll have to take this one out next time around)  
 
