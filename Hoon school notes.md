@@ -37,6 +37,7 @@
 	   - We created the __demo.hoon__ file on __zod/base/gen__.
 	- To apply the changes to __mars__, it is necessary to "__sync__" both OSs by calling the command
 	 ```> |commit %base```
+	  - To run it on dojo : `++demo 1`
 - Generator file is like a script
 - 3 kinds of types:
 	  - __atoms__: values with auras
@@ -45,3 +46,20 @@
    - A __bunt__ is the default value of a type
    - __list__ is a nul terminated tuple
 	   - Is possible to have a list of different types
+
+### Lesson 3
+
+##### youtube description
+- A trap can be used to repeat a section of code with changes to values. 
+- Cores are the fundamental data structure of Hoon code.  
+- Many cores have a default `$` buc arm, essentially the primary (or only) code.  
+- Arms hold code, while legs hold data. Both are limbs.  
+- Values at addresses in a tree can be unambiguously located several ways.
+
+##### Notes
+
+- __|-__ barhep: trap
+- __%=__ centis
+- __==__ tistis
+- __|__ bar runes make cores
+- A core is similar to an object, _"is a cell of code and date"_

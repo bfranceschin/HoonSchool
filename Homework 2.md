@@ -91,6 +91,11 @@ Molds define Hoon structures.  They have a default value (“bunt”) and are s
 - Q9. Produce a named tuple with three elements `x`, `y`, and `z`, all of type `@rs` (real number, number with a fractional part).
 
 - Q10. What does the infixed `^` ket do?  E.g., `4^5`.  (Infer from its behavior in the Dojo.)
+```
+> 4^5
+[4 5]
+:: It creates a cell using the two operands.
+```
 
 ##  Deferring Computation
 
@@ -101,11 +106,24 @@ You can store a gate as a standalone reusable file called a generator.
 - Q11. Take your code for the boxcar function in the previous homework.  Produce a gate which works for any `@ud` input value `x`.  (Your answer should just be that gate, `|=` onwards.)  
 
 ![](https://lh3.googleusercontent.com/GircNC0W49Axuddqbw280FX7CYA53q70TXT1v_qp6OEFutcIcz5Kc1OnwRFbjLIgG9kMfRYuvawL5XWK7a6mb10Itiye6y22UOAX0pPDZOblTLR7IfiwDa6Iwx8PEDkKFVG4jw3fzxbhX89NVT32QTaJMKfkP6SSAmIxM7xgVTOHFBLhQTvtlWHVGfmZPsKJgos_)
+```
+|=  x=@ud
+?:  ?&  (gth x 3)
+        (lte x 5)
+        ==
+    1
+    0
+```
 
 - Q12. Take your code for the boxcar function gate in the previous question.  Produce a generator from the gate named `boxcar.hoon`.  Don't forget to add at least one comment to explain its intent.  (Your answer will be very similar to the answer for Q11.)
 
 ![](https://lh3.googleusercontent.com/GircNC0W49Axuddqbw280FX7CYA53q70TXT1v_qp6OEFutcIcz5Kc1OnwRFbjLIgG9kMfRYuvawL5XWK7a6mb10Itiye6y22UOAX0pPDZOblTLR7IfiwDa6Iwx8PEDkKFVG4jw3fzxbhX89NVT32QTaJMKfkP6SSAmIxM7xgVTOHFBLhQTvtlWHVGfmZPsKJgos_)
 
 - Q13. Write a generator which accepts the value of a planet as a `@p` and returns the next neighbor, also as a `@p`.  The next neighbor of a planet is calculated by incrementing the numeric value of the planet's address by one.  You will then need to convert it from `@ud` back to `@p`.  (You don't need to filter for planet input or anything, just for `@p`.)  For instance, the next neighbor of ~sampel-palnet is ~radbyr-fonlyr.
+```
+|=  p=@p
+=/  n  `@ud`p
+`@p`(add n 1)
+```
 
 - Q14. What are your biggest remaining concerns, points of misunderstanding or fuzzy understanding, or other feedback on Lesson 2?
