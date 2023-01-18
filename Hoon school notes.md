@@ -63,3 +63,4 @@
 - __==__ tistis
 - __|__ bar runes make cores
 - A core is similar to an object, _"is a cell of code and date"_
+- How to not return anything?
