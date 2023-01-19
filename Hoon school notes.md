@@ -64,3 +64,14 @@
 - __|__ bar runes make cores
 - A core is similar to an object, _"is a cell of code and date"_
 - How to not return anything?
+
+
+### Lesson 4
+##### youtube description
+- There are four basic representations of text in Urbit: cords, knots, terms, and tapes. 
+- Lists organize data for collective analysis or application.  
+- There is a suite of tools for working with lists.  
+- A library is an importable core of code. 
+- Gates that produce gates (like `list` v. (list)`) form an extremely common and important pattern in Hoon.
+
+##### Notes
