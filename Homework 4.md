@@ -128,7 +128,58 @@ There are four basic representations of text in Urbit:  cords, knots, terms, an
 ```
 
 - Q6. In the lesson, there was an exercise to produce a library and a generator which counted the number of words in a given tape.  Compose the library such that it consists of a `|%` barcen core including a `++split-tape` arm and a `++count-elements` arm.  Submit the library as your answer here.
+```
+:: hoon school hw4 q6
+|%
+
+++  split
+    |=  t=tape
+    =/  count  0
+    =/  ret  *(list tape)
+
+    =>
+    |%
+    ++  find-space
+    |=  f=tape
+    =/  index  0
+    |-  
+    ?:  =(index (lent f))
+    index
+    ?:  =(' ' (snag index f))
+    index
+    $(index +(index))
+    --
+
+    |-
+    ::?~  t :: does not compile, why?
+    ?:  =(0 (lent t))
+    `(list tape)`ret
+    =/  space  (find-space t)
+    %=  $
+        t  `tape`(slag +(space) t)
+        ret  `(list tape)`(weld ret ~[(scag space t)])
+    ==
+
+++  count-elements
+    |=  l=(list)
+    ^-  @ud
+    =/  index  0
+    |-
+    ?~  l
+    index
+    $(l t:l, index +(index))
+
+--
+```
 
 - Q7. In the lesson, there was an exercise to produce a library and a generator which counted the number of words in a given tape.  The generator should import the library using the `/+` faslus rune and return the number of words in a text sample.  Submit the generator as your answer here.
+```
+:: hoon school hw4 q7
+/+  text
+
+|=  t=tape
+=/  words  (split:text t)
+(count-elements:text words)
+```
 
 - Q8. What are your biggest remaining concerns, points of misunderstanding or fuzzy understanding, or other feedback on Lesson 4?
