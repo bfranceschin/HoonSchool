@@ -74,4 +74,18 @@
 - A library is an importable core of code. 
 - Gates that produce gates (like `list` v. (list)`) form an extremely common and important pattern in Hoon.
 
+
+### Lesson 5
+##### youtube description
+- Core patterns can be used to build many kinds of customized gates. 
+- The door is a common configuration for an Urbit core.  
+- The arms of doors are gate-builders.  
+- A desk in Clay organizes collections of code and data resources.  
+- A path in Clay describes a unique access path to a resource.  
+- The beak describes the current triplet of ship, desk, and timestamp for the filesystem.
 ##### Notes
+- `!:` turns on debug mode
+- `^` skips the first name match (matches the "upper" scope)
+-  
+
+##
