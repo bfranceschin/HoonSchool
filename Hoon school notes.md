@@ -88,4 +88,15 @@
 - `^` skips the first name match (matches the "upper" scope)
 -  
 
+### Lesson 5
+##### youtube description
+- The Hoon type system requires you to be very explicit with the expected values. 
+- Maps and sets are tools for collecting and processing collections of data.  
+- Units allow one to distinguish a null result (failure) from a zero.
+
+##### Notes
+- Good practice is to use ^- type at the first line of a gate, to enforce the return type and catch type errors early.
+- mold definitions take place in a subset of the Hoon parser called “structure Hoon”
+- unit is a type union of a __~__ and a __[~ item]__ . It is used valid 0 return and a null return
+
 ##
