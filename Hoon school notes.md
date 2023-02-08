@@ -88,7 +88,7 @@
 - `^` skips the first name match (matches the "upper" scope)
 -  
 
-### Lesson 5
+### Lesson 6
 ##### youtube description
 - The Hoon type system requires you to be very explicit with the expected values. 
 - Maps and sets are tools for collecting and processing collections of data.  
@@ -98,5 +98,16 @@
 - Good practice is to use ^- type at the first line of a gate, to enforce the return type and catch type errors early.
 - mold definitions take place in a subset of the Hoon parser called “structure Hoon”
 - unit is a type union of a __~__ and a __[~ item]__ . It is used valid 0 return and a null return
+
+### Lesson 7
+##### youtube description
+- The Hoon standard library provides many (but not all) desirable tools. (It tends to be parser-heavy.) 
+- Good Hoon style weights heavier expressions to the bottom. Use `?.` wutdot to discretionally control this.  
+- Switch statements allow you to make decisions based on possible elements of a type union (e.g. of terms).  
+- Gates can be manipulated to accept different numbers of arguments, or applied across multiple values, using functional programming arms.
+##### Notes
+- __?-__ : switch
+- __;:__ : chain the application of a gate to the next values, eg __;:(add 1 2 3 4 5)__
+
 
 ##

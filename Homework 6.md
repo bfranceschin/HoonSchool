@@ -29,7 +29,7 @@ The Caesar cipher code is an excellent example of an Urbit generator built with 
 
 - Q2. Extend the generator to allow for use of characters other than a-z.  It should also permit characters .,;:'" and you may have it rotate those the same way as letters are rotated.
 ```
-:: included the new character at the end of tha arm alpha
+:: included the new characters at the end of tha arm alpha
 ++  alpha  "abcdefghijklmnopqrstuvwxyz.,;:"
 ```
 
@@ -44,7 +44,7 @@ The Caesar cipher code is an excellent example of an Urbit generator built with 
 |-
 ?:  (gth steps maxshift)
 ret
-$(ret (snoc `(list tape)`ret +:(caesar msg steps)), steps +(steps))
+$(ret (snoc `(list tape)`ret (caesar msg steps)), steps +(steps))
 ```
 
 - Q4. What are your biggest remaining concerns, points of misunderstanding or fuzzy understanding, or other feedback on Lesson 6?
