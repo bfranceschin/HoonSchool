@@ -110,4 +110,13 @@
 - __;:__ : chain the application of a gate to the next values, eg __;:(add 1 2 3 4 5)__
 
 
+### Lesson 8
+##### youtube description
+- A `%say` generator (and its cousin the `%ask` generator) affords you more flexibility in generator inputs. 
+- Stateful applications requiring deferring parts of an expression relative to other parts.
+
+##### Notes
+- `|=  *`: gate that receives a noun. we can write `%say` generator that receives no argument using this spec. This is only possible in with `%say` generators
+- `%say` generator returns a cask, that is a pair of mark and noun
+
 ##
