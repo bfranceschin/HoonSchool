@@ -119,4 +119,15 @@
 - `|=  *`: gate that receives a noun. we can write `%say` generator that receives no argument using this spec. This is only possible in with `%say` generators
 - `%say` generator returns a cask, that is a pair of mark and noun
 
+
+### Lesson 9
+##### youtube description
+- Hoon error codes, while arcane, can give you a reasonably good idea of what has gone wrong. 
+- Unit testing can augment your confidence that your code works correctly.
+##### Notes
+- `mint-vain`: in a conditional, there is some hoon expression that never evaluates
+- `mint-lost`: something can happen but is not being considered
+- `^-`: there is no impact on performance, it is resolved at compile time
+- no tabs in hoon, tabs do not count as a gap
+
 ##
